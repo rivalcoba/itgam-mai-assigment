@@ -5,7 +5,7 @@
 
 #let cover-entry(label, primary, secondary: none) = [
   #text(
-    size: 8pt,
+    size: 11pt,
     weight: "bold",
     tracking: 1.15pt,
     fill: burgundy,
@@ -75,7 +75,7 @@
           align(center + horizon)[
             #pad(left: 12mm, right: 12mm)[
               #text(
-                size: 7.8pt,
+                size: 15pt,
                 weight: "bold",
                 tracking: 1.2pt,
                 fill: burgundy,
