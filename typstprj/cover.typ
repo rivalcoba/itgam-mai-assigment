@@ -1,5 +1,8 @@
 #import "styles.typ": burgundy, gold, muted, navy
 
+// Separacion entre bloques de la portada
+#let cover-block-gap = 18mm
+
 #let cover-entry(label, primary, secondary: none) = [
   #text(
     size: 8pt,
@@ -32,7 +35,7 @@
   #pad(left: 18mm, right: 18mm, top: 12mm, bottom: 12mm)[
     #grid(
       columns: (1fr,),
-      rows: (48mm, 8mm, 70mm, 127mm, 20mm),
+      rows: (48mm, 8mm, 197mm, 20mm),
       row-gutter: 0pt,
 
       // Identidad institucional.
@@ -64,52 +67,52 @@
         )
       ],
 
-      // Título y descripción.
-      align(center + horizon)[
-        #pad(left: 12mm, right: 12mm)[
-          #text(
-            size: 7.8pt,
-            weight: "bold",
-            tracking: 1.2pt,
-            fill: burgundy,
-          )[#upper(data.document-type)]
-
-          #v(2mm)
-
-          #text(
-            size: 8.5pt,
-            weight: "medium",
-            fill: muted,
-          )[#data.course · #data.course-code]
-
-          #v(5mm)
-
-          #par(leading: 0.98em, justify: false)[
-            #text(
-              size: 23pt,
-              weight: "bold",
-              fill: navy,
-              hyphenate: false,
-            )[#data.title]
-          ]
-
-          #v(4mm)
-
-          #par(leading: 1.15em, justify: false)[
-            #text(
-              size: 10.5pt,
-              fill: muted,
-            )[#data.subtitle]
-          ]
-        ]
-      ],
-
-      // Datos académicos en una secuencia vertical, sin recuadros.
+      // Bloques informativos con una separación vertical común.
       align(center + horizon)[
         #grid(
           columns: (1fr,),
-          rows: (30mm, 30mm, 30mm, 30mm),
-          row-gutter: 1mm,
+          row-gutter: cover-block-gap,
+          align(center + horizon)[
+            #pad(left: 12mm, right: 12mm)[
+              #text(
+                size: 7.8pt,
+                weight: "bold",
+                tracking: 1.2pt,
+                fill: burgundy,
+              )[#upper(data.document-type)]
+
+              #v(2mm)
+
+              #text(
+                size: 8.5pt,
+                weight: "medium",
+                fill: muted,
+              )[#data.course · #data.course-code]
+            ]
+          ],
+
+          align(center + horizon)[
+            #pad(left: 12mm, right: 12mm)[
+              #par(leading: 0.98em, justify: false)[
+                #text(
+                  size: 23pt,
+                  weight: "bold",
+                  fill: navy,
+                  hyphenate: false,
+                )[#data.title]
+              ]
+
+              #v(4mm)
+
+              #par(leading: 1.15em, justify: false)[
+                #text(
+                  size: 10.5pt,
+                  fill: muted,
+                )[#data.subtitle]
+              ]
+            ]
+          ],
+
           align(center + horizon)[
             #cover-entry(
               "PRESENTA",
