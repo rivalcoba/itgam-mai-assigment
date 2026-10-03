@@ -16,7 +16,7 @@
   email: "correo@institucional.mx",
 
   professor: "Nombre de la persona docente",
-  city: "Ciudad, entidad",
-  date: "Mes de 2026",
-  period: "Periodo académico",
+  city: "CDMX, Gustavo A. Madero",
+  date: "10 de Agosto de 2026",
+  period: "Agosto - Diciembre 2026",
 )
