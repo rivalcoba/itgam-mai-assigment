@@ -3,35 +3,35 @@
 
 = Resultados
 
-Presente los hallazgos en el mismo orden de los objetivos o preguntas. Describa lo observado sin adelantar una interpretación extensa, la cual corresponde a la discusión.
+El ajuste por mínimos cuadrados de las cuatro observaciones es:
 
-== Resultados principales
+$ hat(y) = 2.5345 x + 39.7069 $ <eq:regresion-publicidad-ventas>
+
+La forma ajustada, indicada por @eq:regresion-publicidad-ventas, emplea $x$ para el gasto publicitario en miles y $hat(y)$ para las ventas estimadas.
 
 #grid(
   columns: (1fr, 1fr, 1fr),
   column-gutter: 4mm,
   result-card(
-    [Métrica 1],
-    [Valor],
-    [Descripción breve del resultado.],
+    [Observaciones],
+    [4],
+    [Parejas de publicidad y ventas analizadas.],
   ),
   result-card(
-    [Métrica 2],
-    [Valor],
-    [Descripción breve del resultado.],
+    [Pendiente],
+    [2.53],
+    [Unidades de venta estimadas por cada mil de publicidad.],
   ),
   result-card(
-    [Métrica 3],
-    [Valor],
-    [Descripción breve del resultado.],
+    [Estimación para x = 15],
+    [77.72],
+    [Extrapolación en unidades de venta.],
   ),
 )
 
-== Tabla de resultados
-
 #figure(
   table(
-    columns: (1.35fr, 1fr, 1fr, 1.4fr),
+    columns: (1.2fr, 1fr, 1fr, 1fr),
     align: (left, center, center, left),
     fill: (x, y) => if y == 0 {
       navy
@@ -42,28 +42,16 @@ Presente los hallazgos en el mismo orden de los objetivos o preguntas. Describa 
     },
     table.header(
       text(fill: white, weight: "bold")[Condición],
-      text(fill: white, weight: "bold")[Métrica A],
-      text(fill: white, weight: "bold")[Métrica B],
-      text(fill: white, weight: "bold")[Observación],
+      text(fill: white, weight: "bold")[Observada],
+      text(fill: white, weight: "bold")[Estimada],
+      text(fill: white, weight: "bold")[Observada - estimada],
     ),
-    [Línea base], [—], [—], [Resultado de referencia],
-    [Propuesta], [—], [—], [Resultado obtenido],
+    [Publicidad: 5], [52], [52.38], [-0.38],
+    [Publicidad: 7], [58], [57.45], [0.55],
+    [Publicidad: 10], [65], [65.05], [-0.05],
+    [Publicidad: 12], [70], [70.12], [-0.12],
   ),
-  caption: [Comparación de los resultados principales.],
+  caption: [Ventas observadas, estimadas por la recta y diferencias para cada nivel de publicidad.],
 )
 
-== Figuras
-
-#figure(
-  rect(
-    width: 100%,
-    height: 55mm,
-    fill: paper,
-    stroke: 0.6pt + rgb("#d9dee7"),
-  )[
-    #align(center + horizon)[
-      Sustituya este bloque por una gráfica, diagrama o imagen.
-    ]
-  ],
-  caption: [Título informativo de la figura y descripción de sus elementos esenciales.],
-)
+La relación observada es creciente: las ventas aumentan conforme aumenta la publicidad. Las diferencias entre los valores observados y los estimados son menores a una unidad en los cuatro casos. Al sustituir $x = 15$ en la recta se obtiene $hat(y) approx 77.72$ unidades de venta. Esta estimación queda fuera del intervalo de publicidad observado, que va de 5 a 12 miles.

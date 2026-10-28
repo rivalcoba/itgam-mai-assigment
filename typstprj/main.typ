@@ -4,6 +4,7 @@
 
 // Configuración general del documento.
 #show: body => document-style(report, body)
+#set math.equation(numbering: "(1)")
 
 // Portada institucional.
 #cover(report)
@@ -18,7 +19,7 @@
 
 #outline(
   title: [Contenido],
-  depth: 3,
+  depth: 1,
   indent: 8mm,
 )
 #pagebreak()
@@ -37,6 +38,3 @@
   title: [Referencias],
   style: "ieee",
 )
-
-// Material complementario.
-#include "sections/06-anexos.typ"

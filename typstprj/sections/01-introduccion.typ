@@ -1,20 +1,5 @@
-#import "../components.typ": note-box
-
 = Introducción
 
-== Contexto y problema
+La regresión lineal simple describe la tendencia entre una variable explicativa y una variable de respuesta mediante una recta. Su ecuación permite resumir la asociación observada y obtener estimaciones dentro de un contexto definido @IllowskyDean2023RegressionEquation. En este ejercicio, la variable explicativa es el gasto en publicidad, expresado en miles, y la variable de respuesta es el nivel de ventas.
 
-Presente el tema, delimite el contexto y explique el problema que motiva el trabajo. Integre únicamente los antecedentes indispensables para comprender su relevancia.
-
-== Antecedentes
-
-Sintetice la literatura directamente relacionada con el problema. Compare enfoques, hallazgos y limitaciones; evite convertir esta sección en una lista aislada de resúmenes. Utilice citas bibliográficas mediante claves como @He2017.
-
-== Objetivo y alcance
-
-Declare el objetivo general y, cuando sea necesario, los objetivos específicos. Precise qué cubre el reporte y qué queda fuera de su alcance.
-
-#note-box(
-  [Pregunta orientadora],
-  [¿Qué problema se estudia, por qué importa y qué pretende demostrar, analizar o resolver este trabajo?],
-)
+La recta de regresión por mínimos cuadrados se obtiene minimizando la suma de las diferencias cuadráticas entre los valores observados y los estimados @NISTLeastSquares. Su pendiente expresa el cambio promedio estimado en las ventas por cada unidad de cambio en la publicidad @PennStateSTAT501SimpleLinearRegression. El objetivo de este trabajo es interpretar esa relación con los cuatro datos disponibles y mostrar cómo el modelo puede apoyar una estimación comercial. El análisis describe una asociación; no demuestra causalidad ni valida el comportamiento fuera del intervalo observado.

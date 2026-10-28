@@ -1,10 +1,5 @@
-#import "../components.typ": note-box
-
 = Resumen
 
-Redacte entre 150 y 250 palabras. Presente de forma compacta el contexto, el objetivo, el método, los resultados principales y la conclusión más relevante. El resumen debe poder comprenderse sin consultar el resto del documento.
+Este reporte analiza la relación entre el gasto en publicidad y las ventas mediante un modelo de regresión lineal simple. Se utilizaron cuatro observaciones del ejercicio, con inversiones publicitarias de 5, 7, 10 y 12 miles y ventas de 52, 58, 65 y 70 unidades, respectivamente. El ajuste por mínimos cuadrados produce la ecuación $hat(y) = 2.5345 x + 39.7069$, donde la pendiente estima un aumento promedio de aproximadamente 2.53 unidades de venta por cada mil adicionales de publicidad. Los valores estimados para las cuatro observaciones quedan a menos de una unidad de los valores registrados, y la relación observada es positiva y aproximadamente lineal. Como aplicación, el modelo permite explorar escenarios de planeación comercial; para una inversión de 15 miles estima alrededor de 77.72 unidades de venta. Esta última estimación es una extrapolación, pues excede el intervalo de datos observado, y debe interpretarse con cautela. Además, el conjunto contiene solo cuatro observaciones y no permite concluir que la publicidad cause por sí sola el aumento de ventas. El modelo resume la tendencia observada, pero una evaluación más confiable requiere más datos y considerar otros factores comerciales.
 
-#note-box(
-  [Palabras clave],
-  [Incluya de tres a cinco términos específicos, separados por punto y coma.],
-)
+#strong[Palabras clave:] regresión lineal; mínimos cuadrados; publicidad; ventas; predicción.

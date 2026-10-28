@@ -1,24 +1,7 @@
-#import "../components.typ": note-box
-
 = Discusión
 
-== Interpretación de los hallazgos
+La pendiente positiva de 2.5345 indica que, dentro del modelo ajustado, cada mil adicional de gasto publicitario se asocia con un incremento promedio estimado de aproximadamente 2.53 unidades de venta. La recta ascendente resume la tendencia general y queda cerca de las cuatro observaciones. Las diferencias pequeñas describen el ajuste a estos datos; no bastan para asegurar que el modelo represente otros periodos o mercados.
 
-Explique qué significan los resultados con respecto al objetivo y la pregunta del trabajo. Distinga entre evidencia directa, inferencias y posibles explicaciones.
+La interpretación de la pendiente corresponde a la regresión lineal simple descrita por Penn State @PennStateSTAT501SimpleLinearRegression, mientras que el ajuste aplica el criterio de mínimos cuadrados @NISTLeastSquares. Como referencia inicial para la planeación comercial, el modelo permite estimar ventas asociadas con distintos niveles de inversión. Para 15 miles estima aproximadamente 77.72 unidades, pero esa inversión excede el intervalo observado. Por ello, esta extrapolación debe tomarse con cautela y no como garantía ni como única base para decidir una inversión @IllowskyDean2023RegressionEquation.
 
-== Relación con trabajos previos
-
-Compare los resultados con la literatura citada en la introducción. Identifique coincidencias, diferencias y posibles causas sin afirmar más de lo que permiten los datos.
-
-== Implicaciones
-
-Describa las implicaciones teóricas, metodológicas o prácticas de los hallazgos. Señale para quiénes son relevantes y bajo qué condiciones.
-
-== Limitaciones
-
-Exponga las restricciones del diseño, los datos, las herramientas y la generalización de los resultados.
-
-#note-box(
-  [Criterio de cierre],
-  [La discusión debe responder qué significan los resultados, no repetir únicamente sus valores.],
-)
+El análisis se limita a cuatro observaciones y no incluye factores como estacionalidad, precios o competencia, que también podrían relacionarse con las ventas. El buen ajuste a estos datos no demuestra causalidad ni asegura que la tendencia se mantenga en otros periodos o mercados.
